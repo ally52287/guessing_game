@@ -1,100 +1,107 @@
+<html>
 <script>
 
-var guess, answer, message;
+function favoriteColor(){
+    var guess, color;
 
-answer = ("yellow");
-console.log(answer);
+    color = ('yellow');
+    console.log(color);
 
-guess = prompt('What is my favorite color?')
+    guess = prompt('What is my favorite color?');
 
-if(guess == answer) {
-  message = "How amazing! You must be phychic."
-}
-else {
-  message = "That's ok. You'll get them next time!"
-}
-
-alert(message);
-
-var guess, answer, message;
-
-answer = ("28");
-console.log(answer);
-
-guess = prompt('How old am I?');
-
-if(guess == answer) {
-  message = "You got it!"
-}
-else {
-  message = "Oh so close."
+    if(guess == color) {
+      alert('How amazing you must be a Phychic');
+    }
+    else {
+      alert('That\'s ok. You\'ll get them next time!');
+    }
 }
 
-alert(message);
 
-var guess, answer, message;
+function howOld(){
+     var  age, attempt;
+     age =('28');
+      console.log(age);
 
-answer = ("3");
-console.log(answer);
+    attempt = prompt('How old am I?');
 
-guess = prompt('How many pets do I have?');
+    if(attempt == age) {
+        alert('You got it!');
+    }
+    else {
+       alert('Oh so close.');
+    }
 
-if(guess == answer) {
-  message = "Incredible, you got it right!"
-}
-else {
-  message = "Oh no. I thought you knew me. Try again."
-}
-
-alert(message);
-
-var guess, answer, message;
-
-answer = Math.floor(Math.random() * 10 + 1);
-console.log(answer);
-
-guess = prompt("I'm thinking of a number between 1 and 10...what is it?");
-
-if(guess == answer) {
-  message = "You are amazing!"
-}
-else {
-  message = "That's ok, just try again."
 }
 
-alert(message);
+function pets(){
+    var pet, guess;
+    pet = ('3');
+    console.log(pet);
 
-var guess, answer, message;
+    guess = prompt('How many pets do I have?');
 
-answer = ("Rae");
-console.log(answer);
+    if(guess == pet) {
+       alert('Incredible, you got it right!');
+    }
+    else {
+      alert('Oh no. I thought you knew me. Try again.');
+    }
 
-guess = prompt("What is my middle name?");
 
-if(guess == answer) {
-  message = "Great guess!"
 }
-else {
-  message = "You almost got it!"
+ var answer, guess, playing;
+ playing = true;
+  answer = Math.floor(Math.random() * 10 + 1);
+  console.log(answer);
+
+while(playing){
+   guess = prompt('I\'m thinking of a number between 1 and 10...what is it?');
+
+  if(guess == answer) {
+    alert('You are amazing!');
+    playing = false ;
+  }
+  else {
+     alert('That\'s ok, just try again.');
+  }
+
 }
+function middle(){
+   var name, guess
+    name = ('Rae');
+    console.log(name);
 
-alert(message);
+    guess = prompt('What is my middle name?');
 
-var guess, answer, message;
+    if(guess == name) {
+      alert('Great guess!');
+    }
+    else {
+      alert('You almost got it!');
+    }
 
-answer = ("Seahawks");
-console.log(answer);
-
-guess = prompt("What is my favorite professional sports team?");
-
-if(guess == answer) {
-  message = "You better believe it!"
 }
-else {
-  message = "Oh man I can't beleive you got that wrong!"
-}
+ function favteam(){
+      var team, guess;
+      team = ('Seahawks');
+      console.log(team);
 
-alert(message);
+      guess = prompt('What is my favorite professional sports team?');
+
+      if(guess == team) {
+        alert('You better believe it!');
+      }
+      else {
+        alert('Oh man I can\'t beleive you got that wrong!');
+      }
+
+ }
 
 </script>
 
+  <button onclick=favoriteColor() >Guess my favorite color</button>
+  <button onclick=howOld() >My age</button>
+  <button onclick=pets() >Pets</button>
+  <button onclick=favteam()>Guess my favorite team</button>
+</html>
