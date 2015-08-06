@@ -1,7 +1,6 @@
 <html>
 <script>
 
-
 var Game = function (guess, color, age, attempt, pet, guess2, answer, name, guess4, team, guess5) {
   this.guess = guess;
   this.color = color;
@@ -26,17 +25,17 @@ var Game = function (guess, color, age, attempt, pet, guess2, answer, name, gues
     this.runMath();
   }
 }
-    var checkAnswer = new Game ('What\'s my favorite color?',
-                                'yellow',
-                                '28',
-                                'How old am I?',
-                                '3',
-                                'How many pets do I have?',
-                                'I\'m thinking of a number between 1 and 10...what is it?',
-                                'Rae',
-                                'What is my middle name?',
-                                'Seahawks',
-                                'What is my favorite professional sports team?')
+  var checkAnswer = new Game ('What\'s my favorite color?',
+                              'yellow',
+                              '28',
+                              'How old am I?',
+                              '3',
+                              'How many pets do I have?',
+                              'I\'m thinking of a number between 1 and 10...what is it?',
+                              'Rae',
+                              'What is my middle name?',
+                              'Seahawks',
+                              'What is my favorite professional sports team?')
 
 Game.prototype.runColor = function(){
   var asd = prompt(this.guess);
@@ -52,10 +51,10 @@ Game.prototype.runAge = function(){
   var asd = prompt(this.attempt);
 
     if(asd == this.age) {
-        alert('You got it!');
+      alert('You got it!');
     } else {
-       alert('Oh so close.');
-      }
+      alert('Oh so close.');
+    }
 };
 
 Game.prototype.runPet = function(){
@@ -65,7 +64,7 @@ Game.prototype.runPet = function(){
       alert('Incredible, you got it right!');
     } else {
       alert('Oh no. I thought you knew me. Try again.');
-      }
+    }
 };
 
 Game.prototype.runMath = function(){
@@ -88,23 +87,23 @@ Game.prototype.runName = function(){
   var asd = prompt(this.guess4);
 
     if(asd == this.name) {
-        alert('Great guess!');
+      alert('Great guess!');
     } else {
-        alert('You almost got it!');
+      alert('You almost got it!');
     }
 };
 
 Game.prototype.runTeam = function(){
   var asd = prompt(this.guess5);
 
-      if(asd == this.team) {
-        alert('You better believe it!');
-      } else {
-        alert('Oh man I can\'t beleive you got that wrong!');
-      }
+    if(asd == this.team) {
+      alert('You better believe it!');
+    } else {
+      alert('Oh man I can\'t beleive you got that wrong!');
+    }
 };
 
-    checkAnswer.startGame()
+checkAnswer.startGame()
 
 </script>
 
